@@ -1,6 +1,5 @@
 package com.example.admin_project.model.network.request;
 
-import javafx.concurrent.Service;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
