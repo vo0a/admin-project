@@ -6,8 +6,6 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.transaction.Transactional;
-import java.time.LocalDateTime;
 
 public class AdminUserRepositoryTest extends AdminProjectApplicationTests {
 
