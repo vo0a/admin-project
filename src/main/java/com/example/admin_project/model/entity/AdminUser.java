@@ -33,7 +33,7 @@ public class AdminUser {
 
     private String status;
 
-    private String role; // 계정 권한
+    private String role; // todo Enum 으로 변경, 계정 권한
 
     private LocalDateTime lastLoginAt;
 

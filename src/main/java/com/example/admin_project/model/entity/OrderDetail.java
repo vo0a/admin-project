@@ -27,7 +27,7 @@ public class OrderDetail {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String status;
+    private String status; // todo Enum 으로 변경
 
     private LocalDate arrivalDate;
 

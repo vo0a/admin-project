@@ -28,7 +28,7 @@ public class Partner {
 
     private String name;
 
-    private String status;
+    private String status; // todo Enum 으로 변경
 
     private String address;
 

@@ -1,5 +1,8 @@
 package com.example.admin_project.model.entity;
 
+import com.example.admin_project.model.enumclass.OrderGroupStatus;
+import com.example.admin_project.model.enumclass.OrderType;
+import com.example.admin_project.model.enumclass.PaymentType;
 import lombok.*;
 import lombok.experimental.Accessors;
 import org.springframework.data.annotation.CreatedBy;
@@ -28,15 +31,18 @@ public class OrderGroup {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private OrderGroupStatus status;
 
-    private String orderType; // 주문의 형태 - 일괄 / 개별
+    @Enumerated(EnumType.STRING)
+    private OrderType orderType;
 
-    private String revAddress; // 수신 주소
+    private String revAddress;
 
-    private String revName; // 수신인
+    private String revName;
 
-    private String paymentType; // 카드 / 현금
+    @Enumerated(EnumType.STRING)
+    private PaymentType paymentType; // 카드 / 현금
 
     private BigDecimal totalPrice;
 
