@@ -2,6 +2,7 @@ package com.example.admin_project.repository;
 
 import com.example.admin_project.AdminProjectApplicationTests;
 import com.example.admin_project.model.entity.User;
+import com.example.admin_project.model.enumclass.UserStatus;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class UserRepositoryTest extends AdminProjectApplicationTests {
     public void create(){
         String account = "Test01";
         String password = "Test01";
-        String status = "REGISTERED";
+        UserStatus status = UserStatus.REGISTERED;
         String email = "Test01@gmail.com";
         String phoneNumber = "010-1111-2222";
         LocalDateTime registeredAt = LocalDateTime.now(); // 가입일자

@@ -6,7 +6,10 @@ import com.example.admin_project.model.network.request.PartnerApiRequest;
 import com.example.admin_project.model.network.response.PartnerApiResponse;
 import com.example.admin_project.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -78,6 +81,11 @@ public class PartnerApiLogicService extends BaseService<PartnerApiRequest, Partn
                    return Header.OK();
                })
                .orElseGet(()-> Header.ERROR("데이터 없음"));
+    }
+
+    @Override
+    public Header<List<PartnerApiResponse>> search(Pageable pageable) {
+        return null;
     }
 
     private Header<PartnerApiResponse> response(Partner partner){
